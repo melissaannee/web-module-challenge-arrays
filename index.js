@@ -97,7 +97,7 @@ function addFlavor(flavors, newFlavor){
   return flavors
 }
 
- console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'))
+//  console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -112,10 +112,12 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(flavors){
+  flavors.pop();
+  return flavors
 }
 
+// console.log(removeLastFlavor(originalFlavors))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -130,10 +132,11 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(flavors, num){
+  return flavors[num]
 }
 
+// console.log(getFlavorByIndex(originalFlavors, 2))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -150,9 +153,11 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(flavors, oldFlavor){
+  return flavors.filter(flavor => flavor !== oldFlavor);
 }
+
+ console.log(removeFlavorByName(originalFlavors, "Rocky Road"))
 
 
 
@@ -175,11 +180,18 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(flavors, flavorType){
+  let result = []
+  for (let i = 0; i < flavors.length; i++) {
+    let flavor = flavors[i]
+    if (flavor.includes(flavorType)) {
+      result.push(flavor)
+    }   
+  }
+  return result
 }
 
-
+console.log(filterByWord(originalFlavors, "Chocolate"))
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
