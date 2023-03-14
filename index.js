@@ -50,7 +50,7 @@ function copy(flavors){
   return [...flavors]
 }
 
-console.log(originalFlavors)
+// console.log(originalFlavors)
 
 
 
@@ -65,10 +65,18 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-  /*your code here*/
- }
+function is31Flavors(flavors){ // represents THE ARRAY OF FLAVORS THAT GETS PASSED IN THE FUNCTION
+  if (flavors.length === 31){
+    return true 
+  } else {
+    return false
+  }
+}
 
+// console.log(is31Flavors(originalFlavors)) // true // true
+// console.log(is31Flavors([])) // false // true
+// console.log(is31Flavors(["cookies and cream"])) // false // true
+// console.log(is31Flavors(['mango', 'strawberry', 'banana'])) // false
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -84,10 +92,12 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
- }
+function addFlavor(flavors, newFlavor){
+  flavors.unshift(newFlavor)
+  return flavors
+}
 
+ console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
